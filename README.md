@@ -22,4 +22,6 @@ In addition to this every solution will have my first try at solving the problem
 
 - 1 - Multiples of 3 and 5
 
-    The intuitive method to solving this exercise is a brute force for loop:
+    The intuitive method to solving this exercise is a brute force for loop, checking every single number from 1 to the target (in this casem 1000), the problem with this method is simples: it gets very inneficient very fast, going through so many numbers will eventually make this solution unreasonable for bigger and bigger numbers, so we need to find a better way
+
+    The faster solution takes advantage from noticing that we actually are just summing up every number in a arithmetic progression: 3, 6, 9 .. 999 + 5, 10, 15 ... 995. Now we just need to use the arithmetic series with the right variables and find the solution!
