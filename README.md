@@ -25,3 +25,13 @@ In addition to this every solution will have my first try at solving the problem
     The intuitive method to solving this exercise is a brute force for loop, checking every single number from 1 to the target (in this casem 1000), the problem with this method is simples: it gets very inneficient very fast, going through so many numbers will eventually make this solution unreasonable for bigger and bigger numbers, so we need to find a better way
 
     The faster solution takes advantage from noticing that we actually are just summing up every number in a arithmetic progression: 3, 6, 9 .. 999 + 5, 10, 15 ... 995. Now we just need to use the arithmetic series with the right variables and find the solution!
+
+- 2 - Even Fibonacci numbers
+
+    The first reaction to this problem and simplest solution is making a fibonacci recursive function and check every number until it gets bigger than 4 million, this is good but if we just calculate the even numbers from fibonacci sequence we can not only have no need to check if the number is even or not but also make a lot less equations. Let's look at the numbers in fibonacci to see if we can find a pattern:
+
+    1 1 *2* 3 5 *8* 13 21 *34* 55
+
+    So we have 2, 8, 34... we can notice that 1- we get one even number every 2 odds number 2- every next even number is made from 4c + p where c is the current even number and p is the previous even number. (If you want to see a good proof for this checkout the Euler forum thread about this problem).
+
+    With this information we can pretty easily make a simple function that calculates even fibonacci numbers! After that just put that on a loop for until it gets to 4 million.
